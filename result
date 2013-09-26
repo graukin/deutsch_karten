@@ -1,0 +1,35 @@
+| ?- losung.
+
+I=
+[ihr, er, moechte, wollen] [muessen, wir, er, kann] [moechten, es, ihr, duerfen]
+[koennt, ich, du, moechte] [darf, du, ihr, will] [muesst, sie, plSie, musst]
+[er, ich, darf, sollst] [moechtet, kann, es, du] [sollen, will, plSie, ich]
+
+I=
+[ihr, er, moechte, wollen] [muessen, wir, er, kann] [moechten, es, ihr, duerfen]
+[koennt, ich, du, moechte] [darf, du, ihr, will] [er, ich, darf, sollst]
+[muesst, sie, plSie, musst] [moechtet, kann, es, du] [sollen, will, plSie, ich]
+
+I=
+[ihr, er, moechte, wollen] [muessen, wir, er, kann] [moechten, es, ihr, duerfen]
+[moechtet, kann, es, du] [darf, du, ihr, will] [muesst, sie, plSie, musst]
+[er, ich, darf, sollst] [koennt, ich, du, moechte] [sollen, will, plSie, ich]
+
+R=
+[muessen, wir, er, kann] [will, plSie, ich, sollen] [moechten, es, ihr, duerfen]
+[kann, es, du, moechtet] [darf, du, ihr, will] [muesst, sie, plSie, musst]
+[sollst, er, ich, darf] [koennt, ich, du, moechte] [wollen, ihr, er, moechte]
+
+true ? ;
+
+I=
+[ihr, er, moechte, wollen] [muessen, wir, er, kann] [moechten, es, ihr, duerfen]
+[moechtet, kann, es, du] [darf, du, ihr, will] [er, ich, darf, sollst]
+[muesst, sie, plSie, musst] [koennt, ich, du, moechte] [sollen, will, plSie, ich]
+
+I=
+[ihr, er, moechte, wollen] [muessen, wir, er, kann] [moechten, es, ihr, duerfen]
+[koennt, ich, du, moechte] [darf, du, ihr, will] [er, ich, darf, sollst]
+[moechtet, kann, es, du] [muesst, sie, plSie, musst] [sollen, will, plSie, ich]
+
+(751502 ms) no
