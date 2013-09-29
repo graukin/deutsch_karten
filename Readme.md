@@ -17,6 +17,7 @@ On the dotted card there are 2 "infrequent" pronouns: "du" and "ihr". They can b
 * There is enough place for improvements and reducing total number of combinations, but it'll come later.
 
 Cards (0 is top word, indexes go clockwiser):
+
 1. A=[ihr, er, moechte, wollen]
 2. B=[muessen, wir, er, kann]
 3. C=[moechten, es, ihr, duerfen]
@@ -28,6 +29,7 @@ Cards (0 is top word, indexes go clockwiser):
 9. I=[sollen, will, plSie, ich]
 
 Initial stable layouts:
+
 0. [_,_,_,_,E,_,_,_,_] -(fix 2.3 card)-> {[_,_,_,_,E,F,_,_,_], [_,_,_,_,E,G,_,_,_]}
 
 1. [_,_,_,_,E,F,_,_,_] -(fix 3.2 card)-> {[_,_,_,_,E,F,_,D,_], [_,_,_,_,E,F,_,H,_]}
@@ -38,4 +40,3 @@ Initial stable layouts:
 2. [_,_,_,_,E,G,_,D,_] -- too many variants
 2. [_,_,_,_,E,G,_,F,_] -(fix 3.1 card)-> {[_,_,_,_,E,G,D3,F,_], [_,_,_,_,E,G,H2,F,_]}
 2. [_,_,_,_,E,G,_,H,_] -(fix 3.1 card)-> {[_,_,_,_,E,G,F2,H,_]}
-
