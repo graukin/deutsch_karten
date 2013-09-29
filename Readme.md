@@ -17,15 +17,25 @@ On the dotted card there are 2 "infrequent" pronouns: "du" and "ihr". They can b
 * There is enough place for improvements and reducing total number of combinations, but it'll come later.
 
 Cards (0 is top word, indexes go clockwiser):
-A=[ihr, er, moechte, wollen]
-B=[muessen, wir, er, kann]
-C=[moechten, es, ihr, duerfen]
-D=[koennt, ich, du, moechte]
-E=[darf, du, ihr, will]
-F=[muesst, sie, plSie, musst]
-G=[er, ich, darf, sollst]
-H=[moechtet, kann, es, du]
-I=[sollen, will, plSie, ich]
+1. A=[ihr, er, moechte, wollen]
+2. B=[muessen, wir, er, kann]
+3. C=[moechten, es, ihr, duerfen]
+4. D=[koennt, ich, du, moechte]
+5. E=[darf, du, ihr, will]
+6. F=[muesst, sie, plSie, musst]
+7. G=[er, ich, darf, sollst]
+8. H=[moechtet, kann, es, du]
+9. I=[sollen, will, plSie, ich]
 
 Initial stable layouts:
-[_,_,_,_,E,_,_,_,_] -> {[_,_,_,_,E,F,_,_,_], [_,_,_,_,E,G,_,_,_]} -> {[_,_,_,_,E,F,_,D,_], [_,_,_,_,E,F,_,H,_], [_,_,_,_,E,G,_,D,_], [_,_,_,_,E,G,_,F,_], [_,_,_,_,E,G,_,H,_]}
+0. [_,_,_,_,E,_,_,_,_] -(fix 2.3 card)-> {[_,_,_,_,E,F,_,_,_], [_,_,_,_,E,G,_,_,_]}
+
+1. [_,_,_,_,E,F,_,_,_] -(fix 3.2 card)-> {[_,_,_,_,E,F,_,D,_], [_,_,_,_,E,F,_,H,_]}
+1. [_,_,_,_,E,G,_,_,_] -(fix 3.2 card)-> {[_,_,_,_,E,G,_,D,_], [_,_,_,_,E,G,_,F,_], [_,_,_,_,E,G,_,H,_]}
+
+2. [_,_,_,_,E,F,_,D,_] -(fix 1.3 card)-> {[_,_,A(2ticks right),_,E,F,_,D,_], [_,_,C,_,E,F,_,D,_]}
+2. [_,_,_,_,E,F,_,H,_] -(fix 1.3 card)-> {[_,_,A2,_,E,F,_,H,_], [_,_,C,_,E,F,_,H,_]}
+2. [_,_,_,_,E,G,_,D,_] -- too many variants
+2. [_,_,_,_,E,G,_,F,_] -(fix 3.1 card)-> {[_,_,_,_,E,G,D3,F,_], [_,_,_,_,E,G,H2,F,_]}
+2. [_,_,_,_,E,G,_,H,_] -(fix 3.1 card)-> {[_,_,_,_,E,G,F2,H,_]}
+

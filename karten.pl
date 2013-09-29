@@ -72,10 +72,9 @@ kart_drucken([A, B, C, D]) :- print('['), print(A), print(', '), print(B), print
 feld_drucken([], _).
 feld_drucken([A1, A2, A3, A4, A5, A6, A7, A8, A9]) :- kart_drucken(A1), print(' '), kart_drucken(A2), print(' '), kart_drucken(A3), print('\n'), kart_drucken(A4), print(' '), kart_drucken(A5), print(' '), kart_drucken(A6), print('\n'), kart_drucken(A7), print(' '), kart_drucken(A8), print(' '), kart_drucken(A9), print('\n').
 
-losung_r([A, B, C, D, E, F, G, H, I]) :-
+losung_r([A, B, C, D, E, F, G, H, I], R) :-
 	print('\nI=\n'),
         feld_drucken([A, B, C, D, E, F, G, H, I]),
-        R=[_, _, _, _, E, F, _, H, _],
         feld_umruhren([A, B, C, D, E, F, G, H, I], R),
         feld_prufen(R),
 	print('\nR=\n'),
@@ -83,18 +82,25 @@ losung_r([A, B, C, D, E, F, G, H, I]) :-
 
 losung :- 
 	A=[ihr, er, moechte, wollen],
+	A2=[moechte, wollen, ihr, er],
 	B=[muessen, wir, er, kann],
 	C=[moechten, es, ihr, duerfen],
 	D=[koennt, ich, du, moechte],
+	D3=[ich, du, moechte, koennt],
 	E=[darf, du, ihr, will], % center
 	F=[muesst, sie, plSie, musst],
+	F2=[plSie, musst, muesst, sie],
 	G=[er, ich, darf, sollst],
 	H=[moechtet, kann, es, du],
+	H2=[es, du, moechtet, kann],
 	I=[sollen, will, plSie, ich],
-	( losung_r([A, B, C, D, E, F, G, H, I]);
-	losung_r([A, B, C, D, E, G, F, H, I]);
-	losung_r([A, B, C, H, E, F, G, D, I]);
-	losung_r([A, B, C, H, E, G, F, D, I]);
-	losung_r([A, B, C, D, E, G, H, F, I])
+	( losung_r([A, B, C, D, E, F, G, H, I], [_, _, A2, _, E, F, _, D, _]);
+	losung_r([A, B, C, D, E, G, F, H, I], [_, _, C, _, E, F, _, D, _]);
+	losung_r([A, B, C, H, E, F, G, D, I], [_, _, A2, _, E, F, _, H, _]);
+	losung_r([A, B, C, H, E, F, G, D, I], [_, _, C, _, E, F, _, H, _]);
+	losung_r([A, B, C, H, E, F, G, D, I], [_, _, _, _, E, G, _, D, _]);
+	losung_r([A, B, C, H, E, F, G, D, I], [_, _, _, _, E, G, D3, F, _]);
+	losung_r([A, B, C, H, E, F, G, D, I], [_, _, _, _, E, G, H2, F, _]);
+	losung_r([A, B, C, D, E, G, H, F, I], [_, _, _, _, E, G, F2, H, _])
 	).
 
